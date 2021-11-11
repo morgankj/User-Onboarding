@@ -33,7 +33,7 @@ function UserForm(props) {
                         name = 'first_name'
                         type = 'text'
                     />
-                </label>
+                </label><br/>
                 <label>Last Name&nbsp;
                     <input 
                         value = {formValues.last_name}
@@ -41,7 +41,7 @@ function UserForm(props) {
                         name = 'last_name'
                         type = 'text'
                     />
-                </label>
+                </label><br/>
                 <label>Email&nbsp;
                     <input 
                         value = {formValues.email}
@@ -49,7 +49,7 @@ function UserForm(props) {
                         name = 'email'
                         type = 'email'
                     />
-                </label>
+                </label><br/>
                 <label>Password&nbsp;
                     <input 
                         value = {formValues.password}
@@ -57,7 +57,7 @@ function UserForm(props) {
                         name = 'password'
                         type = 'password'
                     />
-                </label>
+                </label><br/>
                 <label>Confirm Password&nbsp;
                     <input 
                         value = {formValues.confirmPassword}
@@ -65,7 +65,7 @@ function UserForm(props) {
                         name = 'confirmPassword'
                         type = 'password'
                     />
-                </label>
+                </label><br/>
                 <label>Terms of Service&nbsp;
                     <input 
                         value = {formValues.tos}
@@ -73,7 +73,7 @@ function UserForm(props) {
                         name = 'tos'
                         type = 'checkbox'
                     />
-                </label>
+                </label><br/>
             </div>
             <button disabled={disabled}>SUBMIT</button>
         </form>

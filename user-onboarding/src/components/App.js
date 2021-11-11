@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import * as yup from 'yup';
 
-import UserForm from './userForm';
+import UserForm from './UserForm';
 import formSchema from '../validation/formSchema';
 import User from './User';
 

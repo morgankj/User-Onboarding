@@ -19,7 +19,7 @@ const formSchema = yup.object().shape({
         .string()
         .required('You must enter a password')
         .min(5, 'Your password must be at least 5 characters'),
-    confirmPassword: yup
+    confirmPassword: yup  //this breaks my checkbox and the error never goes away > need to debug this issue
         .string()    
         .oneOf([yup.ref('password'), null], 'Passwords must match'),
     tos: yup
