@@ -47,6 +47,61 @@ describe('User-Onboarding App', () => {
                 .should('have.value', '')
                 .type('Cullen')
                 .should('have.value', 'Cullen');
+            emailInput()
+                .should('have.value', '')
+                .type('twilight@email.com')
+                .should('have.value', 'twilight@email.com');
+            passwordInput()
+                .should('have.value', '')
+                .type('password123')
+                .should('have.value', 'password123');
+            confirmPasswordInput()
+                .should('have.value', '')
+                .type('password123')
+                .should('have.value', 'password123');
+        })
+
+        it('Can check terms of service on and off', () => {
+            tos()
+                .should('not.be.checked')
+                .click()
+                .should('be.checked')
+                .click()
+                .should('not.be.checked');
+        })
+
+        describe('Submitting a new User', () => {
+            it('The submit button activates when all fields have been filled', () => {
+                fNameInput().type('Edward');
+                lNameInput().type('Cullen');
+                emailInput().type('twilight@email.com');
+                passwordInput().type('password123');
+                confirmPasswordInput().type('password123');
+                tos().click();
+                submitButton().should('not.be.disabled');
+            })
+
+            it('The submit button deactivates when you clear a required field', () => {
+                fNameInput().type('Edward');
+                lNameInput().type('Cullen');
+                emailInput().type('twilight@email.com');
+                passwordInput().type('password123');
+                confirmPasswordInput().type('password123');
+                tos().click();
+                submitButton().should('not.be.disabled');
+                fNameInput().clear();
+                submitButton().should('be.disabled');
+            })
+
+            it('You are able to submit a new User', () => {
+                fNameInput().type('Edward');
+                lNameInput().type('Cullen');
+                emailInput().type('twilight@email.com');
+                passwordInput().type('password123');
+                confirmPasswordInput().type('password123');
+                tos().click();
+                submitButton().click();
+            })
         })
 
         
