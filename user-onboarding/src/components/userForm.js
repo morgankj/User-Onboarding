@@ -75,7 +75,7 @@ function UserForm(props) {
                     />
                 </label><br/>
             </div>
-            <button disabled={disabled}>SUBMIT</button>
+            <button disabled={disabled} id="submit">SUBMIT</button>
         </form>
     )
 };
